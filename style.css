@@ -568,8 +568,11 @@ input, textarea {
     .about-content p{
         width: 20rem;
         position: relative;
-       
-    
+    .background-latar .container-bg img{
+        position:relative;
+        right:30px;
+        padding:20px;
+        border-radius:10px;
     }
     .instagram-logo{
         position: relative;
