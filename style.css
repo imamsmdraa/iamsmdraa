@@ -15,6 +15,7 @@ body, html {
 .home-website{
     color: #A52A2A;
     text-decoration: none;
+
 }
 .home-website:hover{
     /* color: #9fd3c7; */
@@ -108,6 +109,7 @@ header nav ul li a {
     min-height: 80vh;
     color: #ccc;
 }
+
 .navbar-home{
     color: #A52A2A;
     font-size: 19px;
@@ -168,6 +170,8 @@ header nav ul li a {
 .about-content h2 {
     font-size: 2rem;
     color: #A52A2A;
+    right: 100px;
+    position: relative;
 }
 
 .about-content p {
@@ -213,6 +217,9 @@ section h2{
     justify-content: center;
     display: flex;
 }
+
+
+
 /* Project Image Container Style */
 .project {
     position: relative;
@@ -225,6 +232,14 @@ section h2{
     width: 100%;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
     display: block;
+    border-radius: 10px;
+}
+
+.project-image {
+    width: 100%; /* Ensures the image takes up the entire width of the container */
+    height: auto;
+    aspect-ratio: 3 / 4; 
+    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -270,18 +285,18 @@ section h2{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-
+    
 }
 
-.project-image {
-    width: 100%; /* Ensures the image takes up the entire width of the container */
+
+
+/* .project-image {
+    width: 100%; 
     height: auto;
-    aspect-ratio: 3 / 4; /* Adjust based on your preferred aspect ratio for portrait images */
-    object-fit: cover; /* Ensures the image covers the aspect ratio area without distortion */
-    border-radius: 10px; /* Optional: Adds rounded corners to your images */
-}
-
-
+    aspect-ratio: 3 / 4; 
+    object-fit: cover; 
+    border-radius: 10px; 
+} */
 
 .profile-pic {
     width: 100px;
@@ -331,13 +346,22 @@ input, textarea {
    
 }
 #background img{
-    width: 40%;
-    height: 40%;
     border-radius: 10px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     transition: image 1s ease-in-out; 
+}
+#background img {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity 1s ease-in-out; /* Transisi ease-in-out */
+    opacity: 1; 
+    /
 }
 #background {
 
@@ -359,16 +383,6 @@ input, textarea {
     border-left: 4px solid #9fd3c7;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-}
-#background img {
-    width: 40%;
-    height: 40%;
-    border-radius: 10px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: opacity 1s ease-in-out; /* Transisi ease-in-out */
-    opacity: 1; /* Pastikan gambar awalnya terlihat */
 }
 
 /* Menggunakan class untuk kontrol transparansi gambar saat mengganti */
@@ -415,6 +429,9 @@ input, textarea {
 .footer-get{
     color: #FFF8DC;
 }
+
+
+
 /* Responsive adjustments */
 
 /* Apply a background image to the About section on laptop screens */
@@ -432,13 +449,6 @@ input, textarea {
         background-repeat: no-repeat; 
         
     }
-}
-.project-image {
-    width: 100%; 
-    height: auto;
-    aspect-ratio: 3 / 4; 
-    object-fit: cover; 
-    border-radius: 10px; 
 }
 
 /* Media Query for Laptops and above */
@@ -529,10 +539,69 @@ input, textarea {
 }
 
 @media (max-width: 576px) {
-    .header-container {
-        padding: 10px; /
-    }
+ .header-container {
+       padding: 10px;
 
+      }
+   .header-container nav ul{
+        display: flex;
+    }
+  .navbar-home{
+        border: 1px solid white;
+        position: relative;
+        right:-1000px;
+      }
+
+    .a-navbar{
+        position: relative;
+        right: 50px;
+    }
+    .about-content{
+        position: relative;
+        right: 50px;
+    }
+    .about-content h2{
+        font-size: 22px;
+        position: relative;
+        right: 50px;
+    }
+    .about-content p{
+        width: 20rem;
+        position: relative;
+       
+    
+    }
+    .instagram-logo{
+        position: relative;
+        top: 11rem; 
+    }
+    .github-logo{
+        position: relative;
+        top: 11rem; 
+    }
+    .freelancer-logo{
+        position: relative;
+        top: 11rem; 
+    }
+    .background-latar{
+        position: relative;
+        top: 20px;
+    }
+    .container-bg{
+        display: contents;
+        align-items: center;
+        justify-content: center;
+    }
+    .container-bg img{
+        position: relative;
+        width: 15rem;
+        height: 15rem;
+    }
+   .container-bg p{
+    position: relative;
+    right: 5px;
+   }
+ }
     header h1 {
         font-size: 20px;
     }
@@ -548,8 +617,6 @@ input, textarea {
         width: 60px; 
         margin-top: 5px;
     }
-}
 
 
 
-/* resoponsive mobile */
